@@ -33,12 +33,17 @@ If you are using the JS Api for Metalsmith, then you can require the module and 
 ```js
 var timestamp = require('metalsmith-timestamp');
 
-metalsmith.use(timestamp());
+metalsmith.use(timestamp(options));
 ```
 
 ## Options
 
-None yet
+#### format
+
+Type: `String`  
+Default: '%d %B %Y %H:%M:%S'
+
+[strftime](https://github.com/samsonjs/strftime) date time format
 
 ## License
 
