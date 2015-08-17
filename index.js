@@ -15,7 +15,7 @@ function timestamp (opts) {
 		var data;
 		Object.keys(files).filter(minimatch.filter('*.html', { matchBase: true })).forEach(function (file, index, arr) {
 			data = files[file];
-			data.contents = new Buffer(data.contents.toString() + '\r\n<!-- Genarated on: '+ strftime(opts.format) +' -->');
+			data.contents = new Buffer(data.contents.toString() + '\r\n<!-- Generated on: '+ strftime(opts.format) +' -->');
 		});
 		done();
 	}
