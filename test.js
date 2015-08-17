@@ -22,7 +22,7 @@ it('should add timestamp to html file', function (cb) {
 	test = function () {
 		return function (files, metalsmith, done) {
 			var file = files['index.html'].contents.toString();
-			assert(!!file.match(/<!-- Genarated on:/));
+			assert(!!file.match(/<!-- Generated on:/));
 			done();
 		}
 	};
@@ -34,7 +34,7 @@ it('should add timestamp to html file with custom time format', function (cb) {
 	test = function () {
 		return function (files, metalsmith, done) {
 			var file = files['index.html'].contents.toString();
-			var regexp = new RegExp('<!-- Genarated on: '+ strftime('%Y') +' -->');
+			var regexp = new RegExp('<!-- Generated on: '+ strftime('%Y') +' -->');
 			assert(!!file.match(regexp));
 			done();
 		}
